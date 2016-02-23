@@ -17,3 +17,12 @@ class Utils: NSObject {
         alert.show()
     }
 }
+
+
+extension UIButton {
+    func setImageColorForState(image: UIImage, color: UIColor, forState: UIControlState) {
+        let temp = image.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        setImage(temp, forState: forState)
+        tintColor = color
+    }
+}

@@ -7,8 +7,10 @@
     <customFonts key="customFonts">
         <mutableArray key="Bariol_Bold.otf">
             <string>Bariol-Bold</string>
+            <string>Bariol-Bold</string>
         </mutableArray>
         <mutableArray key="Bariol_Regular.otf">
+            <string>Bariol-Regular</string>
             <string>Bariol-Regular</string>
             <string>Bariol-Regular</string>
         </mutableArray>
@@ -24,6 +26,8 @@
                 <outlet property="loadingSpinner" destination="4r9-tx-58j" id="OH9-15-lW8"/>
                 <outlet property="logoImg" destination="mne-8p-3wj" id="IRR-ha-e8D"/>
                 <outlet property="passwordTxt" destination="a3l-Ao-zaz" id="1VS-z6-LpD"/>
+                <outlet property="registerBtn" destination="lO2-wf-aIk" id="w1O-FS-CJX"/>
+                <outlet property="registerContainer" destination="pgH-gZ-A0o" id="0X2-q3-qkx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="aTD-gi-TpC"/>
             </connections>
         </placeholder>
@@ -134,10 +138,44 @@
                         </mask>
                     </variation>
                 </view>
+                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pgH-gZ-A0o" userLabel="Register Container">
+                    <rect key="frame" x="0.0" y="646" width="415" height="90"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lO2-wf-aIk">
+                            <rect key="frame" x="120" y="50" width="176" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="175" id="y9d-NB-sKU"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Bariol-Bold" family="Bariol" pointSize="20"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="9" maxY="0.0"/>
+                            <state key="normal" title="CADASTRE-SE" image="register-icon">
+                                <color key="titleColor" red="0.85882352941176465" green="0.82745098039215681" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="onTouchUpRegisterBtn:" destination="-1" eventType="touchUpInside" id="9vT-UY-4N6"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ainda não é cadastrado?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLa-Bs-G0J">
+                            <rect key="frame" x="144" y="31" width="127" height="13"/>
+                            <fontDescription key="fontDescription" name="Bariol-Regular" family="Bariol" pointSize="13"/>
+                            <color key="textColor" red="0.85882352941176465" green="0.82745098039215681" blue="0.84705882352941175" alpha="0.34999999999999998" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="lO2-wf-aIk" secondAttribute="bottom" constant="20" id="CW3-uQ-4JK"/>
+                        <constraint firstItem="kLa-Bs-G0J" firstAttribute="bottom" secondItem="pgH-gZ-A0o" secondAttribute="bottom" constant="-46" id="FU4-Ou-4VI"/>
+                        <constraint firstItem="kLa-Bs-G0J" firstAttribute="centerX" secondItem="pgH-gZ-A0o" secondAttribute="centerX" id="b4H-lv-JXC"/>
+                        <constraint firstItem="lO2-wf-aIk" firstAttribute="centerX" secondItem="pgH-gZ-A0o" secondAttribute="centerX" id="ugH-9Z-3Gg"/>
+                        <constraint firstAttribute="height" constant="90" id="yBY-AB-1WP"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.1333333333" green="0.21960784310000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="JqK-SF-hsz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="8Zi-4k-bx7"/>
+                <constraint firstAttribute="bottom" secondItem="pgH-gZ-A0o" secondAttribute="bottom" id="A1S-49-IjH"/>
+                <constraint firstItem="pgH-gZ-A0o" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="aBC-gi-UXF"/>
                 <constraint firstItem="JqK-SF-hsz" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="b7q-Fc-D4Q"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
@@ -149,6 +187,7 @@
     </objects>
     <resources>
         <image name="enter-icon" width="20" height="18"/>
+        <image name="register-icon" width="19" height="19"/>
         <image name="white-logo" width="100" height="62"/>
     </resources>
 </document>

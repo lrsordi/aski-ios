@@ -22,8 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // start login
         testNavigationController = UINavigationController()
         let loginViewController: LoginViewController = LoginViewController()
-        
         self.testNavigationController!.pushViewController(loginViewController, animated: false)
+        
+        
         
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window!.rootViewController = testNavigationController
