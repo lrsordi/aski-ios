@@ -8,6 +8,8 @@
     <customFonts key="customFonts">
         <mutableArray key="Bariol_Bold.otf">
             <string>Bariol-Bold</string>
+            <string>Bariol-Bold</string>
+            <string>Bariol-Bold</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -41,21 +43,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w7y-RB-nTy">
-                                <rect key="frame" x="0.0" y="80" width="600" height="86"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" directionalLockEnabled="YES" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" pagingEnabled="YES" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="w7y-RB-nTy">
+                                <rect key="frame" x="0.0" y="-20" width="600" height="480"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BMc-na-oPq" userLabel="DefaultTitle">
-                                        <rect key="frame" x="0.0" y="-80" width="600" height="60"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BMc-na-oPq" userLabel="DefaultTitle">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="register-title-icon" translatesAutoresizingMaskIntoConstraints="NO" id="brA-tS-iP4">
-                                                <rect key="frame" x="20" y="20" width="38" height="30"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="register-title-icon" translatesAutoresizingMaskIntoConstraints="NO" id="brA-tS-iP4">
+                                                <rect key="frame" x="10" y="15" width="38" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="38" id="BYa-al-Ntq"/>
                                                     <constraint firstAttribute="height" constant="30" id="eo7-yi-gGt"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Cadastro" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xiy-f6-MuQ">
-                                                <rect key="frame" x="58" y="17" width="102" height="28"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cadastro" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xiy-f6-MuQ">
+                                                <rect key="frame" x="36" y="16" width="102" height="28"/>
                                                 <fontDescription key="fontDescription" name="Bariol-Bold" family="Bariol" pointSize="28"/>
                                                 <color key="textColor" red="0.85882352941176465" green="0.82745098039215681" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -67,11 +69,58 @@
                                             <constraint firstItem="xiy-f6-MuQ" firstAttribute="centerY" secondItem="BMc-na-oPq" secondAttribute="centerY" id="QTX-At-YJp"/>
                                             <constraint firstItem="brA-tS-iP4" firstAttribute="centerY" secondItem="BMc-na-oPq" secondAttribute="centerY" id="T3O-Qu-spk"/>
                                             <constraint firstAttribute="height" constant="60" id="W6j-Yf-1tr"/>
-                                            <constraint firstItem="brA-tS-iP4" firstAttribute="leading" secondItem="BMc-na-oPq" secondAttribute="leading" constant="20" id="iFp-z8-mMZ"/>
+                                            <constraint firstItem="brA-tS-iP4" firstAttribute="leading" secondItem="BMc-na-oPq" secondAttribute="leading" constant="10" id="iFp-z8-mMZ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2xF-T5-NQG" userLabel="formContainer">
+                                        <rect key="frame" x="10" y="70" width="580" height="800"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZ0-L8-p6d">
+                                                <rect key="frame" x="0.0" y="-1" width="17" height="33"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="6tg-LB-Umw"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Bariol-Bold" family="Bariol" pointSize="30"/>
+                                                <color key="textColor" red="0.13333333333333333" green="0.2196078431372549" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="highlightedColor" red="0.13333333333333333" green="0.2196078431372549" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Dados pessoais" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDf-fH-uGU">
+                                                <rect key="frame" x="17" y="9" width="233" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="MAH-rb-MCo"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Bariol-Bold" family="Bariol" pointSize="21"/>
+                                                <color key="textColor" red="0.84313725490196079" green="0.47843137254901957" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9vL-w2-aoc">
+                                                <rect key="frame" x="0.0" y="32" width="580" height="2"/>
+                                                <color key="backgroundColor" red="0.13333333333333333" green="0.2196078431372549" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="2" id="HbZ-KR-lt3"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.31508049240000002" blue="1" alpha="0.4713381901840491" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="uDf-fH-uGU" firstAttribute="top" secondItem="AZ0-L8-p6d" secondAttribute="top" constant="3" id="1Yq-eb-Kzq"/>
+                                            <constraint firstItem="9vL-w2-aoc" firstAttribute="width" secondItem="2xF-T5-NQG" secondAttribute="width" id="Doi-tK-SkT"/>
+                                            <constraint firstItem="uDf-fH-uGU" firstAttribute="leading" secondItem="AZ0-L8-p6d" secondAttribute="trailing" id="MVN-d6-Fkc"/>
+                                            <constraint firstItem="AZ0-L8-p6d" firstAttribute="top" secondItem="2xF-T5-NQG" secondAttribute="top" constant="-1" id="bXV-TV-uGK"/>
+                                            <constraint firstItem="9vL-w2-aoc" firstAttribute="centerX" secondItem="2xF-T5-NQG" secondAttribute="centerX" id="cP7-Db-c2h"/>
+                                            <constraint firstItem="9vL-w2-aoc" firstAttribute="top" secondItem="uDf-fH-uGU" secondAttribute="bottom" id="kuh-RM-Yqq"/>
+                                            <constraint firstAttribute="height" constant="800" id="u1R-R1-Dx8"/>
+                                            <constraint firstItem="AZ0-L8-p6d" firstAttribute="leading" secondItem="2xF-T5-NQG" secondAttribute="leading" id="vPE-ld-Z1K"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="BMc-na-oPq" firstAttribute="top" secondItem="w7y-RB-nTy" secondAttribute="top" id="1D4-zd-wXd"/>
+                                    <constraint firstItem="2xF-T5-NQG" firstAttribute="top" secondItem="BMc-na-oPq" secondAttribute="bottom" constant="10" id="FJx-cr-Ff1"/>
+                                    <constraint firstItem="2xF-T5-NQG" firstAttribute="width" secondItem="w7y-RB-nTy" secondAttribute="width" constant="-20" id="Pjn-tA-aNU"/>
+                                    <constraint firstAttribute="height" constant="400" id="Rus-oW-UL0"/>
+                                    <constraint firstItem="2xF-T5-NQG" firstAttribute="leading" secondItem="w7y-RB-nTy" secondAttribute="leading" constant="10" id="abx-Ib-syS"/>
                                     <constraint firstItem="BMc-na-oPq" firstAttribute="centerX" secondItem="w7y-RB-nTy" secondAttribute="centerX" id="mfp-Ar-KJh"/>
                                     <constraint firstItem="BMc-na-oPq" firstAttribute="width" secondItem="w7y-RB-nTy" secondAttribute="width" id="seK-hS-Spr"/>
                                 </constraints>
@@ -79,7 +128,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.94509803921568625" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="w7y-RB-nTy" firstAttribute="top" secondItem="lze-U1-G0e" secondAttribute="topMargin" constant="58" id="0DP-Id-ClR"/>
+                            <constraint firstItem="w7y-RB-nTy" firstAttribute="top" secondItem="lze-U1-G0e" secondAttribute="topMargin" constant="-20" id="0DP-Id-ClR"/>
                             <constraint firstItem="w7y-RB-nTy" firstAttribute="centerX" secondItem="lze-U1-G0e" secondAttribute="centerX" id="5kX-4l-yXa"/>
                             <constraint firstItem="w7y-RB-nTy" firstAttribute="width" secondItem="lze-U1-G0e" secondAttribute="width" id="MKf-sW-ZSk"/>
                         </constraints>

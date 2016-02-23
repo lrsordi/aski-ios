@@ -35,8 +35,9 @@ class RegisterNavigationControllerViewController: UINavigationController {
         
         let logo = UIImage(named: "white-logo")
         let imageView = UIImageView(image:logo)
-        imageView.contentMode = .ScaleAspectFit;
-        self.navigationBar.topItem!.titleView = imageView
+        imageView.contentMode = .Top;
+        self.navigationBar.topItem!.titleView = imageView;
+        self.navigationBar.setTitleVerticalPositionAdjustment(CGFloat(-7), forBarMetrics: UIBarMetrics.Default)
         
 
         
