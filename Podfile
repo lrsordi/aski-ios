@@ -4,6 +4,5 @@
 use_frameworks!
 
 target 'aski' do
-pod 'CPLoadingView'
 end
 
