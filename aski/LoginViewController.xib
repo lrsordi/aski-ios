@@ -21,6 +21,7 @@
                 <outlet property="emailTxt" destination="Rbj-X4-QoT" id="bP8-bT-9Hw"/>
                 <outlet property="enterBtn" destination="ya0-Iz-LZQ" id="Mub-u9-8o8"/>
                 <outlet property="formContainer" destination="JqK-SF-hsz" id="ynx-Ve-O6O"/>
+                <outlet property="loadingSpinner" destination="4r9-tx-58j" id="OH9-15-lW8"/>
                 <outlet property="logoImg" destination="mne-8p-3wj" id="IRR-ha-e8D"/>
                 <outlet property="passwordTxt" destination="a3l-Ao-zaz" id="1VS-z6-LpD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="aTD-gi-TpC"/>
@@ -41,7 +42,7 @@
                                 <constraint firstAttribute="height" constant="62" id="tvs-u3-u78"/>
                             </constraints>
                         </imageView>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" restorationIdentifier="email" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="e-mail" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rbj-X4-QoT" userLabel="email">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" restorationIdentifier="email" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="usuário" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rbj-X4-QoT" userLabel="email">
                             <rect key="frame" x="30" y="88" width="354" height="30"/>
                             <color key="backgroundColor" red="0.20000000000000001" green="0.27450980392156865" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
@@ -89,15 +90,30 @@
                                 <action selector="onTouchUpEnterBtn:" destination="-1" eventType="touchUpInside" id="afX-w6-hRa"/>
                             </connections>
                         </button>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4r9-tx-58j" customClass="CPLoadingView" customModule="aski">
+                            <rect key="frame" x="157" y="176" width="100" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="vQI-3X-RtL"/>
+                                <constraint firstAttribute="width" constant="100" id="vsB-KJ-hN1"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                    <color key="value" red="0.85882352941176465" green="0.82745098039215681" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="height" constant="217" id="4mJ-Ji-AxI"/>
                         <constraint firstItem="a3l-Ao-zaz" firstAttribute="width" secondItem="Rbj-X4-QoT" secondAttribute="width" id="7yu-U8-kr2"/>
+                        <constraint firstItem="4r9-tx-58j" firstAttribute="centerX" secondItem="JqK-SF-hsz" secondAttribute="centerX" id="ALV-BR-3F7"/>
+                        <constraint firstItem="vlW-6F-qdo" firstAttribute="top" secondItem="In8-we-tcC" secondAttribute="bottom" constant="39" id="Bbb-vq-nyp"/>
                         <constraint firstItem="mne-8p-3wj" firstAttribute="centerX" secondItem="JqK-SF-hsz" secondAttribute="centerX" id="Fwa-wL-jka"/>
                         <constraint firstItem="Rbj-X4-QoT" firstAttribute="top" secondItem="mne-8p-3wj" secondAttribute="bottom" constant="26" id="HkI-xJ-Ea4"/>
                         <constraint firstItem="ya0-Iz-LZQ" firstAttribute="centerX" secondItem="JqK-SF-hsz" secondAttribute="centerX" id="N1d-r6-wAg"/>
                         <constraint firstItem="In8-we-tcC" firstAttribute="leading" secondItem="JqK-SF-hsz" secondAttribute="leading" constant="30" id="NYa-6Z-W3U"/>
                         <constraint firstItem="Rbj-X4-QoT" firstAttribute="bottom" secondItem="In8-we-tcC" secondAttribute="bottom" id="Rhr-ua-lGy"/>
+                        <constraint firstItem="ya0-Iz-LZQ" firstAttribute="top" secondItem="vlW-6F-qdo" secondAttribute="bottom" constant="29" id="XHl-dV-ugA"/>
                         <constraint firstItem="vlW-6F-qdo" firstAttribute="width" secondItem="a3l-Ao-zaz" secondAttribute="width" id="YKD-ce-2fS"/>
                         <constraint firstItem="vlW-6F-qdo" firstAttribute="top" secondItem="In8-we-tcC" secondAttribute="bottom" constant="39" id="ZGS-mF-a21"/>
                         <constraint firstItem="a3l-Ao-zaz" firstAttribute="top" secondItem="Rbj-X4-QoT" secondAttribute="bottom" constant="11" id="chd-Wm-tYv"/>
@@ -107,6 +123,7 @@
                         <constraint firstItem="Rbj-X4-QoT" firstAttribute="width" secondItem="JqK-SF-hsz" secondAttribute="width" constant="-60" id="jaU-gy-Yua"/>
                         <constraint firstItem="Rbj-X4-QoT" firstAttribute="width" secondItem="In8-we-tcC" secondAttribute="width" id="lMN-6A-a8G"/>
                         <constraint firstItem="vlW-6F-qdo" firstAttribute="leading" secondItem="JqK-SF-hsz" secondAttribute="leading" constant="30" id="pas-IR-5ZY"/>
+                        <constraint firstItem="4r9-tx-58j" firstAttribute="top" secondItem="vlW-6F-qdo" secondAttribute="bottom" constant="17" id="r1r-QO-2kT"/>
                         <constraint firstItem="ya0-Iz-LZQ" firstAttribute="top" secondItem="vlW-6F-qdo" secondAttribute="bottom" constant="29" id="wgD-5g-S0b"/>
                         <constraint firstItem="a3l-Ao-zaz" firstAttribute="bottom" secondItem="vlW-6F-qdo" secondAttribute="bottom" id="xGR-mZ-Qtb"/>
                         <constraint firstItem="mne-8p-3wj" firstAttribute="top" secondItem="JqK-SF-hsz" secondAttribute="top" id="y7Y-Ru-WQq"/>
@@ -127,6 +144,7 @@
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="587" y="349"/>
         </view>
     </objects>
     <resources>

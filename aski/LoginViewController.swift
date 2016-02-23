@@ -21,6 +21,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordTxt: UITextField!
     @IBOutlet weak var bpasswordTxt: UIView!
     @IBOutlet weak var enterBtn: UIButton!
+    @IBOutlet weak var loadingSpinner: CPLoadingView!
     
     /************************************************************************************************
      ** VARIABLES
@@ -45,6 +46,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         formContainer.hidden = true;
         self.emailTxt.delegate = self;
         self.passwordTxt.delegate = self;
+        loadingSpinner.hidden = true;
         
         // tap for hide keyboard
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
@@ -111,13 +113,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
      ** PRIVATE METHODS
      **************************************************************************************************/
     private func checkForm(){
+        sendForm();
+        return;
         var errors = false;
         var errorsTxt = "";
         
-        if(!Validator.isValidEmail(emailTxt.text!)){
+        if(emailTxt.text?.characters.count < 6){
             errors = true;
             
-            errorsTxt += "\n- Informe um e-mail válido.";
+            errorsTxt += "\n- Usuário deve ter no mínimo 6 caracteres.";
         }
         
         if(passwordTxt.text?.characters.count < 6){
@@ -138,6 +142,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     
     private func sendForm()->Void {
+        self.view.endEditing(true);
+        
+        enterBtn.hidden = true;
+        
+        loadingSpinner.hidden = false;
+        //loadingSpinner.strokeColor = UIColor(red: 0.0, green: 122.0/255.0, blue: 1.0, alpha: 1.0);
+        loadingSpinner.startLoading();
+        
+        GTween.set(loadingSpinner, params:[alpha : 0]);
+        GTween.to(loadingSpinner, time : 1, params: [alpha : 1]);
+        
+        
     }
     
     
