@@ -35,6 +35,7 @@
 		A61FFBD51C7C22E10049AA0A /* CoverRightLeftAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61FFBD41C7C22E10049AA0A /* CoverRightLeftAnimation.swift */; };
 		A61FFBD71C7C286E0049AA0A /* RegisterNavigationControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61FFBD61C7C286E0049AA0A /* RegisterNavigationControllerViewController.swift */; };
 		A67C2CC51C7D60F3007387B2 /* NewLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A67C2CC41C7D60F3007387B2 /* NewLaunchScreen.storyboard */; };
+		A67C2CC71C7D87B0007387B2 /* DynamicBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67C2CC61C7D87B0007387B2 /* DynamicBlurView.swift */; };
 		A68AF93D1C75FC5800DF9244 /* logo-white-1x.png in Resources */ = {isa = PBXBuildFile; fileRef = A68AF93A1C75FC5800DF9244 /* logo-white-1x.png */; };
 		A68AF93E1C75FC5800DF9244 /* logo-white-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A68AF93B1C75FC5800DF9244 /* logo-white-3x.png */; };
 		A68AF93F1C75FC5800DF9244 /* logo-white2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A68AF93C1C75FC5800DF9244 /* logo-white2x.png */; };
@@ -150,6 +151,7 @@
 		A61FFBD41C7C22E10049AA0A /* CoverRightLeftAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverRightLeftAnimation.swift; sourceTree = "<group>"; };
 		A61FFBD61C7C286E0049AA0A /* RegisterNavigationControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterNavigationControllerViewController.swift; sourceTree = "<group>"; };
 		A67C2CC41C7D60F3007387B2 /* NewLaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewLaunchScreen.storyboard; sourceTree = "<group>"; };
+		A67C2CC61C7D87B0007387B2 /* DynamicBlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicBlurView.swift; sourceTree = "<group>"; };
 		A68AF93A1C75FC5800DF9244 /* logo-white-1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-white-1x.png"; path = "media/logo-white-1x.png"; sourceTree = SOURCE_ROOT; };
 		A68AF93B1C75FC5800DF9244 /* logo-white-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-white-3x.png"; path = "media/logo-white-3x.png"; sourceTree = SOURCE_ROOT; };
 		A68AF93C1C75FC5800DF9244 /* logo-white2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-white2x.png"; path = "media/logo-white2x.png"; sourceTree = SOURCE_ROOT; };
@@ -254,6 +256,7 @@
 				A61FFB8B1C7BF07B0049AA0A /* TweenConstraint.swift */,
 				A61FFB8C1C7BF07B0049AA0A /* TweenGlobal.swift */,
 				A61FFB8D1C7BF07B0049AA0A /* TweenObject.swift */,
+				A67C2CC61C7D87B0007387B2 /* DynamicBlurView.swift */,
 			);
 			path = plugins;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 				A61FFB9C1C7BF07B0049AA0A /* TweenConstraint.swift in Sources */,
 				A61FFB991C7BF07B0049AA0A /* Sine.swift in Sources */,
 				A61FFB971C7BF07B0049AA0A /* Quart.swift in Sources */,
+				A67C2CC71C7D87B0007387B2 /* DynamicBlurView.swift in Sources */,
 				A61FFBD71C7C286E0049AA0A /* RegisterNavigationControllerViewController.swift in Sources */,
 				A61FFB941C7BF07B0049AA0A /* Expo.swift in Sources */,
 				A61FFB921C7BF07B0049AA0A /* Ease.swift in Sources */,

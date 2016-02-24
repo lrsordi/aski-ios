@@ -64,7 +64,7 @@
                                 <constraint firstAttribute="height" constant="1" id="O6m-Z7-1nP"/>
                             </constraints>
                         </view>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a3l-Ao-zaz" userLabel="password">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a3l-Ao-zaz" userLabel="password">
                             <rect key="frame" x="30" y="129" width="354" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="HX5-hP-wDg"/>
@@ -121,7 +121,6 @@
                         <constraint firstItem="vlW-6F-qdo" firstAttribute="width" secondItem="a3l-Ao-zaz" secondAttribute="width" id="YKD-ce-2fS"/>
                         <constraint firstItem="vlW-6F-qdo" firstAttribute="top" secondItem="In8-we-tcC" secondAttribute="bottom" constant="39" id="ZGS-mF-a21"/>
                         <constraint firstItem="a3l-Ao-zaz" firstAttribute="top" secondItem="Rbj-X4-QoT" secondAttribute="bottom" constant="11" id="chd-Wm-tYv"/>
-                        <constraint firstItem="In8-we-tcC" firstAttribute="top" secondItem="JqK-SF-hsz" secondAttribute="top" id="dmp-P5-tIQ"/>
                         <constraint firstItem="Rbj-X4-QoT" firstAttribute="leading" secondItem="JqK-SF-hsz" secondAttribute="leading" constant="30" id="eGS-vi-b6V"/>
                         <constraint firstItem="a3l-Ao-zaz" firstAttribute="leading" secondItem="JqK-SF-hsz" secondAttribute="leading" constant="30" id="gTQ-nP-1qS"/>
                         <constraint firstItem="Rbj-X4-QoT" firstAttribute="width" secondItem="JqK-SF-hsz" secondAttribute="width" constant="-60" id="jaU-gy-Yua"/>
@@ -129,14 +128,8 @@
                         <constraint firstItem="vlW-6F-qdo" firstAttribute="leading" secondItem="JqK-SF-hsz" secondAttribute="leading" constant="30" id="pas-IR-5ZY"/>
                         <constraint firstItem="4r9-tx-58j" firstAttribute="top" secondItem="vlW-6F-qdo" secondAttribute="bottom" constant="17" id="r1r-QO-2kT"/>
                         <constraint firstItem="ya0-Iz-LZQ" firstAttribute="top" secondItem="vlW-6F-qdo" secondAttribute="bottom" constant="29" id="wgD-5g-S0b"/>
-                        <constraint firstItem="a3l-Ao-zaz" firstAttribute="bottom" secondItem="vlW-6F-qdo" secondAttribute="bottom" id="xGR-mZ-Qtb"/>
                         <constraint firstItem="mne-8p-3wj" firstAttribute="top" secondItem="JqK-SF-hsz" secondAttribute="top" id="y7Y-Ru-WQq"/>
                     </constraints>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="dmp-P5-tIQ"/>
-                        </mask>
-                    </variation>
                 </view>
                 <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pgH-gZ-A0o" userLabel="Register Container">
                     <rect key="frame" x="0.0" y="646" width="415" height="90"/>

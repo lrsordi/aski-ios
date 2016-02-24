@@ -17,6 +17,7 @@ let scaleY = "scaleY"
 let width = "width"
 let height = "height"
 let rotation = "rotation"
+let blur = "blur"
 let ease = "ease"
 let delay = "delay"
 

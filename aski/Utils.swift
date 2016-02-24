@@ -32,8 +32,6 @@ extension UITextField {
         let border = CALayer()
         let width = CGFloat(1.0)
         border.borderColor = UIColor(red: 136.0/255.0, green: 136.0/255.0, blue: 136.0/255.0, alpha: 1.0).CGColor;
-        
-        print(self.frame.size.width);
         border.frame = CGRect(x: 0, y: self.frame.size.height - width + 3, width:  self.frame.size.width, height: 1)
         
         border.borderWidth = width

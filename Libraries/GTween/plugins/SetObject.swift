@@ -31,6 +31,8 @@ class SetObject: NSObject {
     var originCenterY:Float!
     var originRotation:Float!
     
+    var blurFilter:Bool! = false;
+    
     init(_target:AnyObject, params:[String: Any]){
         target = _target
         
@@ -43,6 +45,10 @@ class SetObject: NSObject {
             delayTime = Double(delayInDouble)
         } else if let delayInFloat = params["delay"] as? Double {
             delayTime = delayInFloat
+        }
+        
+        if var blur = params["blurFilter"] as? Bool {
+            blurFilter = blur;
         }
         
         if var xInInt = params["x"] as? Int {

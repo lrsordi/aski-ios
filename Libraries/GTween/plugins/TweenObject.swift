@@ -70,13 +70,14 @@ class TweenObject:NSObject {
     var originCenterX:Float!
     var originCenterY:Float!
     var originRotation:Float!
+    var blurFilter:Bool! = false;
+    var blurView:DynamicBlurView!;
     
     init(_target:AnyObject, time:Float, params:[String: Any], events:[String: ()->Void] = Dictionary()){
         target = _target
         _time = time;
         targetFrame = target.frame;
         inputParams = params;
-        print(targetFrame)
         
         originCenterX = Float(target.center.x)
         originCenterY = Float(target.center.y)
@@ -92,6 +93,19 @@ class TweenObject:NSObject {
         } else if let delayInFloat = params["delay"] as? Double {
             delayTime = delayInFloat
         }
+        
+        
+        if var blur = params["blur"] as? Bool {
+            blurFilter = blur;
+            blurView = DynamicBlurView(frame : target.bounds);
+            print(target.bounds);
+            blurView.blurRadius = 10;
+
+        
+            target.addSubview(blurView);
+            blurView.refresh();
+        }
+        
         
         runOnComplete  = events["onComplete"]
         runOnUpdate    = events["onUpdate"]
@@ -435,6 +449,11 @@ class TweenObject:NSObject {
     func getNewValue(toValue:Float, fromValue:Float, ease:Float)->Float {
         changeValue = toValue - fromValue
         var value = fromValue + changeValue * ease;
+        
+        if(blurView != nil){
+            blurView.blurRadius = CGFloat(abs(value));
+            blurView.refresh();
+        }
         return value
     }
     
