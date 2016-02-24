@@ -27,6 +27,8 @@ class CoverRightLeftAnimation: NSObject, UIViewControllerAnimatedTransitioning {
         containerView.bringSubviewToFront(toView);
         
         GTween.set(toView, params:[x:Int(containerView.frame.size.width)]);
-        GTween.to(toView, time : 0.5, params:[x : 0, ease : Back.easeOut]);
+        GTween.to(toView, time : 0.5, params:[x : 0, ease : Back.easeOut, "onComplete" : {
+            transitionContext.completeTransition(true);
+        }]);
     }
 }

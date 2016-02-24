@@ -24,6 +24,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var registerBtn: UIButton!
     @IBOutlet weak var registerContainer: UIView!
     @IBOutlet weak var loadingSpinner: CPLoadingView!
+    @IBOutlet weak var imgWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imgHeightConstraint: NSLayoutConstraint!
     
     /************************************************************************************************
      ** VARIABLES
@@ -54,8 +56,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         loadingSpinner.hidden = true;
         
         let highlightColor = UIColor(red: 215.0/255.0, green: 122.0/255.0, blue: 97.0/255.0, alpha: 1.0);
+        
+        
         self.enterBtn.setTitleColor(highlightColor, forState: UIControlState.Highlighted);
         self.enterBtn.setImageColorForState((self.enterBtn.imageView?.image)!, color: highlightColor, forState: UIControlState.Highlighted);
+        
         
         self.registerBtn.setTitleColor(highlightColor, forState: UIControlState.Highlighted);
         self.registerBtn.setImageColorForState((self.registerBtn.imageView?.image)!, color: highlightColor, forState: UIControlState.Highlighted);
@@ -74,6 +79,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             selector: "keyboardWillBeHidden:",
             name: UIKeyboardWillHideNotification,
             object: nil)
+        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named:"background-app")!);
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -106,7 +113,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         GTween.to(registerContainer, time:1, params : [alpha : 1, delay:1.5]);
         
-        goToRegister();
+        //goToRegister();
     }
     
     override func didReceiveMemoryWarning() {
@@ -146,8 +153,31 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     private func goToRegister(){
         let storyboard : UIStoryboard = UIStoryboard(name: "Register", bundle: nil);
         let nextViewController = storyboard.instantiateViewControllerWithIdentifier("navigationcontroller") as! UINavigationController
-        nextViewController.transitioningDelegate = self;
-        self.navigationController?.presentViewController(nextViewController, animated:true, completion:nil);
+       // nextViewController.transitioningDelegate = self;
+        self.navigationController?.presentViewController(nextViewController, animated:false, completion:nil);
+    }
+    
+    private func hideView(hasToGoRegister : Bool){
+        self.view.userInteractionEnabled = false;
+        
+        GTween.to(formContainer, time: 0.8, params :[y : 30, ease:Expo.easeInOut],events:["onComplete":{
+            if(hasToGoRegister == true){
+                self.goToRegister();
+            }
+            }]);
+        GTween.constraintTo(self, constraint: imgWidthConstraint, time: 0.8, params: ["constant": 100*0.6, ease:Expo.easeInOut]);
+        GTween.constraintTo(self, constraint: imgHeightConstraint, time: 0.8, params: ["constant": 62*0.6, ease:Expo.easeInOut]);
+        GTween.to(emailTxt, time:0.5, params : [y : Int(emailTxt.frame.origin.y)+300, alpha : 0, ease : Quint.easeIn, delay:0.1]);
+        GTween.to(bemailTxt, time:0.5, params : [y : Int(bemailTxt.frame.origin.y)+300, alpha : 0, ease : Quint.easeIn, delay:0.1]);
+        
+        GTween.to(passwordTxt, time:0.5, params : [y : Int(passwordTxt.frame.origin.y)+300, alpha : 0, ease : Quint.easeIn, delay:0.05]);
+        GTween.to(bpasswordTxt, time:0.5, params : [y : Int(bpasswordTxt.frame.origin.y)+300, alpha : 0, ease : Quint.easeIn, delay:0.05]);
+        
+        GTween.to(enterBtn, time:0.5, params : [y : Int(enterBtn.frame.origin.y)+300, alpha : 0, ease : Quint.easeIn, delay:0]);
+        GTween.to(registerContainer, time:1, params : [alpha : 0, delay:0]);
+        
+        
+        
     }
     
     private func checkForm(){
@@ -196,6 +226,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 
                 self.view.userInteractionEnabled = true;
                 if(resultBoolean == true){
+                    self.hideView(false);
                 }
                 else{
                     self.loadingSpinner.hidden = true;
@@ -235,7 +266,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func onTouchUpRegisterBtn(sender: AnyObject) {
-        goToRegister();
+        hideView(true);
+       // goToRegister();
     }
     
     

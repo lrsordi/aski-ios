@@ -28,8 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window!.rootViewController = testNavigationController
-        UIApplication.sharedApplication().statusBarStyle = .LightContent;
-        self.window!.backgroundColor = UIColor.whiteColor()
+        UIApplication.sharedApplication().statusBarStyle = .Default;
+        //self.window!.backgroundColor = UIColor.whiteColor()
         self.window!.makeKeyAndVisible()
         
         

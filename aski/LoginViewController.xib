@@ -23,6 +23,8 @@
                 <outlet property="emailTxt" destination="Rbj-X4-QoT" id="bP8-bT-9Hw"/>
                 <outlet property="enterBtn" destination="ya0-Iz-LZQ" id="Mub-u9-8o8"/>
                 <outlet property="formContainer" destination="JqK-SF-hsz" id="ynx-Ve-O6O"/>
+                <outlet property="imgHeightConstraint" destination="tvs-u3-u78" id="QCf-Zt-wTB"/>
+                <outlet property="imgWidthConstraint" destination="p9d-4P-Sys" id="6C7-SB-XE2"/>
                 <outlet property="loadingSpinner" destination="4r9-tx-58j" id="OH9-15-lW8"/>
                 <outlet property="logoImg" destination="mne-8p-3wj" id="IRR-ha-e8D"/>
                 <outlet property="passwordTxt" destination="a3l-Ao-zaz" id="1VS-z6-LpD"/>
@@ -39,7 +41,7 @@
                 <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JqK-SF-hsz">
                     <rect key="frame" x="0.0" y="105" width="414" height="217"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="white-logo" translatesAutoresizingMaskIntoConstraints="NO" id="mne-8p-3wj">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="green-logo" translatesAutoresizingMaskIntoConstraints="NO" id="mne-8p-3wj">
                             <rect key="frame" x="157" y="0.0" width="100" height="62"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="100" id="p9d-4P-Sys"/>
@@ -48,39 +50,37 @@
                         </imageView>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" restorationIdentifier="email" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="usuário" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rbj-X4-QoT" userLabel="email">
                             <rect key="frame" x="30" y="88" width="354" height="30"/>
-                            <color key="backgroundColor" red="0.20000000000000001" green="0.27450980392156865" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="L5A-Dz-YrG"/>
                             </constraints>
-                            <color key="textColor" red="0.85882352941176465" green="0.82745098039215681" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="Bariol-Regular" family="Bariol" pointSize="15"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                         </textField>
-                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="In8-we-tcC" userLabel="bemail">
+                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="In8-we-tcC" userLabel="bemail">
                             <rect key="frame" x="30" y="116" width="354" height="2"/>
-                            <color key="backgroundColor" red="0.84313725490196079" green="0.47843137254901957" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="2" id="O6m-Z7-1nP"/>
+                                <constraint firstAttribute="height" constant="1" id="O6m-Z7-1nP"/>
                             </constraints>
                         </view>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a3l-Ao-zaz" userLabel="password">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a3l-Ao-zaz" userLabel="password">
                             <rect key="frame" x="30" y="129" width="354" height="30"/>
-                            <color key="backgroundColor" red="0.20000000000000001" green="0.27450980392156865" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="HX5-hP-wDg"/>
                             </constraints>
-                            <color key="textColor" red="0.85882352941176465" green="0.82745098039215681" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="Bariol-Regular" family="Bariol" pointSize="15"/>
                             <textInputTraits key="textInputTraits" returnKeyType="send" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                         </textField>
-                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vlW-6F-qdo" userLabel="bpassword">
+                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vlW-6F-qdo" userLabel="bpassword">
                             <rect key="frame" x="30" y="157" width="354" height="2"/>
-                            <color key="backgroundColor" red="0.84313725490000002" green="0.47843137250000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="2" id="cyR-4z-BzG"/>
+                                <constraint firstAttribute="height" constant="1" id="cyR-4z-BzG"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" contentMode="center" ambiguous="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ya0-Iz-LZQ" userLabel="enter">
+                        <button opaque="NO" contentMode="center" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ya0-Iz-LZQ" userLabel="enter">
                             <rect key="frame" x="154" y="188" width="107" height="22"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="107" id="l8z-e9-x1r"/>
@@ -88,13 +88,13 @@
                             <fontDescription key="fontDescription" name="Bariol-Bold" family="Bariol" pointSize="22"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="-2" maxX="14" maxY="0.0"/>
                             <state key="normal" title="ENTRAR" image="enter-icon">
-                                <color key="titleColor" red="0.85882352941176465" green="0.82745098039215681" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <connections>
                                 <action selector="onTouchUpEnterBtn:" destination="-1" eventType="touchUpInside" id="afX-w6-hRa"/>
                             </connections>
                         </button>
-                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4r9-tx-58j" customClass="CPLoadingView" customModule="aski">
+                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4r9-tx-58j" customClass="CPLoadingView" customModule="aski">
                             <rect key="frame" x="157" y="176" width="100" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="vQI-3X-RtL"/>
@@ -102,7 +102,7 @@
                             </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
-                                    <color key="value" red="0.85882352941176465" green="0.82745098039215681" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="value" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
@@ -149,7 +149,7 @@
                             <fontDescription key="fontDescription" name="Bariol-Bold" family="Bariol" pointSize="20"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="9" maxY="0.0"/>
                             <state key="normal" title="CADASTRE-SE" image="register-icon">
-                                <color key="titleColor" red="0.85882352941176465" green="0.82745098039215681" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <connections>
                                 <action selector="onTouchUpRegisterBtn:" destination="-1" eventType="touchUpInside" id="9vT-UY-4N6"/>
@@ -158,7 +158,7 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ainda não é cadastrado?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLa-Bs-G0J">
                             <rect key="frame" x="144" y="31" width="127" height="13"/>
                             <fontDescription key="fontDescription" name="Bariol-Regular" family="Bariol" pointSize="13"/>
-                            <color key="textColor" red="0.85882352941176465" green="0.82745098039215681" blue="0.84705882352941175" alpha="0.34999999999999998" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -171,7 +171,6 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.1333333333" green="0.21960784310000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="JqK-SF-hsz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="8Zi-4k-bx7"/>
                 <constraint firstAttribute="bottom" secondItem="pgH-gZ-A0o" secondAttribute="bottom" id="A1S-49-IjH"/>
@@ -187,7 +186,7 @@
     </objects>
     <resources>
         <image name="enter-icon" width="20" height="18"/>
+        <image name="green-logo" width="206" height="127"/>
         <image name="register-icon" width="19" height="19"/>
-        <image name="white-logo" width="100" height="62"/>
     </resources>
 </document>
